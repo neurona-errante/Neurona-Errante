@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Temporada 1 - Neurona Errante</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>TEMPORADA 2</h1>
+    <h1>Los orígenes del pensamiento científico</h1>
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel" id="carousel">
+      <!-- 6 tarjetas -->
+      <div class="episodio">
+        <h3>Episodio 1</h3>
+        <h3>De la Idea a la Realidad: La Odisea de la Física Experimental junto a Edgar Roldán</h3>
+        <p>"El laboratorio del ser humano es su mente." Edgar Roldán
+
+            <ul>
+            <li>🧠 Experimentos mentales</li>
+            <li>⚙️ Nanomáquinas</li>
+            <li>🎲 Procesos estocásticos</li>
+            <li>🌌 Física fuera del equilibrio</li>
+            <li>💭 Libre albedrío</li>
+            </ul>     
+                      
+            
+            
+            </p>
+        <div class="botones">
+            <a href="#" class="boton-red boton-spotify">
+              <i class="fab fa-spotify"></i> Spotify
+            </a>
+            <a href="#" class="boton-red boton-youtube">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+      </div>
+      <div class="episodio">
+        <h3>Episodio 2</h3>
+        <h3>Más Allá de las Fórmulas: Perspectivas sobre las Matemáticas, Física y la Realidad junto a Isaac Pérez</h3>
+        <p>¿Y si el método científico no es suficiente para comprenderlo todo?
+
+            <ul>
+            <li>🌌 Física, Matemáticas y Realidad</li>
+            <li>🚧 Límites del método científico</li>
+            <li>🔄 ¿Necesitamos otro enfoque?</li>
+            <li>🎓 Buenas prácticas para estudiantes</li>
+            <li>🧠 Métodos para desarrollar intuición</li>
+            <li>👽 Vidas en otros planetas</li>
+            </ul>
+            </p>
+        <div class="botones">
+            <a href="#" class="boton-red boton-spotify">
+              <i class="fab fa-spotify"></i> Spotify
+            </a>
+            <a href="#" class="boton-red boton-youtube">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+      </div>
+      <div class="episodio">
+        <h3>Episodio 3</h3>
+        <h3>  El Arte de Entender lo Inentendible: Teoría del Caos y Futuro de la Ciencia junto a Mario Cosenza</h3>
+        <p>¿Qué puede enseñarnos el caos sobre el mundo?
+            <ul>
+            <li>🌪️ Teoría del Caos </li>
+            <li>🧠Sistemas Complejos.</li> 
+            <li>🌍 Aplicaciones a Problemas Sociales.</li>
+            <li>🏗️ Construccionismo vs. Reduccionismo.</li> 
+            <li>🎓 Consejos para Futuras Generaciones Científica</li>
+            </ul>
+            </p>
+        <div class="botones">
+            <a href="#" class="boton-red boton-spotify">
+              <i class="fab fa-spotify"></i> Spotify
+            </a>
+            <a href="#" class="boton-red boton-youtube">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+      </div>
+      <div class="episodio">
+        <h3>Episodio 4</h3>
+        <h3>Feeling Químico: La naturaleza más allá de lo visible con Thibault Terencio</h3>
+        <p>Dónde están los electrones? 👀
+            <ul>
+            <li>🔬 El mundo desde los ojos de un doctor en química</li>
+            <li>⚛️ La Frontera Cuántico-Clásica</li>
+            <li>✨ "Feeling Químico"</li>
+            <li>❤️ El Amor desde la Química</li>
+            <li>🔗 El rol de enlaces y orbitales</li>
+            🇪🇨 Yachay y su visión transformadora
+            </ul>
+            </p>
+        <div class="botones">
+            <a href="#" class="boton-red boton-spotify">
+              <i class="fab fa-spotify"></i> Spotify
+            </a>
+            <a href="#" class="boton-red boton-youtube">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html">Volver a la página principal</a>
+  
+  <footer>
+    &copy; 2025 Neurona Errante. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const items = Array.from(carousel.children);
+    const total = items.length;
+
+    let index = 0;
+
+    function updateCarousel() {
+      const itemWidth = items[0].offsetWidth + 32;
+      const offset = (window.innerWidth / 2) - (itemWidth / 2);
+      carousel.style.transform = `translateX(${offset - index * itemWidth}px)`;
+
+      items.forEach((item, i) => {
+        item.classList.remove('active');
+        if (i === index) item.classList.add('active');
+      });
+    }
+
+    function cloneItemsIfNeeded() {
+      if (carousel.children.length < total * 2) {
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          carousel.appendChild(clone);
+        });
+      }
+    }
+
+    function nextSlide() {
+  index++;
+  if (index >= carousel.children.length) {
+    index = 0;
+  }
+  updateCarousel();
+}
+
+function cloneItemsIfNeeded() {
+  const clones = items.map(item => item.cloneNode(true));
+  clones.forEach(clone => carousel.appendChild(clone));
+}
+    updateCarousel();
+    setInterval(nextSlide, 5000);
+    window.addEventListener('resize', updateCarousel);
+  </script>
+</body>
+</html>

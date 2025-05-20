@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explora las principales interpretaciones de la mecánica cuántica y cómo intentan dar sentido al comportamiento extraño de la realidad a nivel subatómico.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explora las principales interpretaciones de la mecánica cuántica y cómo intentan dar sentido al comportamiento extraño de la realidad a nivel subatómico."/>
   <title>¿Qué significa la mecánica cuántica? | Blog Neurona Errante</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    @keyframes quantumEffect {
+      0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0, 0);
+      }
+      50% {
+        opacity: 0.4;
+        filter: blur(2px);
+        transform: translate(-2px, 2px);
+      }
+      100% {
+        opacity: 0;
+        filter: blur(4px);
+        transform: translate(3px, -3px);
+      }
+    }
+
+    .quantum-letter {
+      display: inline-block;
+      animation: quantumEffect 1.2s forwards;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -68,8 +90,8 @@
     <p>Interpretaciones posibles de una teoría que desafía la intuición</p>
   </header>
 
-  <div class="container">
-    <p>La mecánica cuántica no solo es una de las teorías más exitosas de la ciencia: también es una de las más desconcertantes. Describe el mundo de lo muy pequeño con una precisión asombrosa, pero al hacerlo, nos obliga a replantear nociones fundamentales de realidad, causalidad y observación. ¿Qué significa realmente esta teoría? ¿Qué nos está diciendo sobre el mundo?</p>
+  <div class="container" id="content">
+        <p>La mecánica cuántica no solo es una de las teorías más exitosas de la ciencia: también es una de las más desconcertantes. Describe el mundo de lo muy pequeño con una precisión asombrosa, pero al hacerlo, nos obliga a replantear nociones fundamentales de realidad, causalidad y observación. ¿Qué significa realmente esta teoría? ¿Qué nos está diciendo sobre el mundo?</p>
 
     <figure>
         <img src="https://nickyoder.com/content/images/size/w2000/2023/05/Title-Quantum-2.jpg" alt="Superposición cuántica">
@@ -114,10 +136,13 @@
       <li>Rovelli, C. (1996). Relational Quantum Mechanics. International Journal of Theoretical Physics.</li>
     </ul>
   </div>
-  
 
   <footer>
     © 2025 Neurona Errante | Preguntas infinitas
   </footer>
+
+
+  <script src="quantum.js"></script>
+
 </body>
 </html>

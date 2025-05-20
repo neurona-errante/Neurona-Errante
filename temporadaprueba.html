@@ -3,175 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Temporada 1 - Neurona Errante</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Explora las principales interpretaciones de la mecánica cuántica y cómo intentan dar sentido al comportamiento extraño de la realidad a nivel subatómico."/>
+  <title>¿Qué significa la mecánica cuántica? | Blog Neurona Errante</title>
+  <style>
+    @keyframes quantumEffect {
+      0% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0, 0);
+      }
+      50% {
+        opacity: 0.4;
+        filter: blur(2px);
+        transform: translate(-2px, 2px);
+      }
+      100% {
+        opacity: 0;
+        filter: blur(4px);
+        transform: translate(3px, -3px);
+      }
+    }
+
+    .quantum-letter {
+      display: inline-block;
+      animation: quantumEffect 1.2s forwards;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #111;
+      margin-top: 2rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
-
 <body>
   <header>
-    <h1>TEMPORADA 1</h1>
-    <h1>Los orígenes del pensamiento científico</h1>
+    <h1>¿Qué significa la mecánica cuántica?</h1>
+    <p>Interpretaciones posibles de una teoría que desafía la intuición</p>
   </header>
 
-  <div class="carousel-container">
-    <button class="flecha izquierda" id="prev"><i class="fas fa-chevron-left"></i></button>
-    <div class="carousel" id="carousel">
-      <!-- 6 tarjetas -->
-      <div class="episodio">
-        <h3>Episodio 1</h3>
-        <h3>En búsqueda de la teoría del todo con Marcos Garzón</h3>
-        <p>¿Es posible entender la Teoría del Todo sin ser Einstein? Con Marcos Garzón, absolutamente. Abordamos fractales, cuántica, gravedad y la ciencia en Ecuador, todo en un lenguaje que hasta tu abuela entendería. Porque simplificamos lo complejo para hacer el conocimiento libre y accesible. ¿Listo para tener tu mente expandida?</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-      <div class="episodio">
-        <h3>Episodio 2</h3>
-        <h3>Modelando culturas e ideas en el tejido de la sociedad con Mateo Carpio</h3>
-        <p>¿Cómo se propagan las ideas y conceptos culturales en una sociedad? En este episodio, Mateo Carpio nos acompaña para hablar de modelos físicos aplicados al complejo tejido social, la transmisión de ideas entre culturas y el sistema educativo del Ecuador. Prepárate para un Podcast que desafiará todo lo que pensabas saber sobre cultura, educación y la curiosa naturaleza del humano.</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-      <div class="episodio">
-        <h3>Episodio 3</h3>
-        <h3> El Latido de la Nada: El Nacimiento del Cosmos con Jordan Zambrano</h3>
-        <p>Una travesía de la Nada al Todo en Neurona Errante, donde exploramos con claridad la esencia del Big Bang y la teoría de la inflación. ¿Son el algo y la nada opuestos o inseparables? Reflexionamos sobre cómo lo extraordinario puede ser parte de un patrón cósmico. Enmarcado en el sistema ecuatoriano, celebramos la curiosidad como impulso científico e invitamos a contemplar la belleza del conocimiento y nuestra trascendencia.</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-      <div class="episodio">
-        <h3>Episodio 4</h3>
-        <h3>Escalas de la Existencia: Fragmentando la Simetría del Cosmos con Ernesto Medina</h3>
-        <p>Sumérgete en las simetrías que moldean la física y el arte, navegando desde lo micro hasta lo cósmico. Con herramientas como la renormalización, exploramos el fascinante mundo de la medida y su escala. Reflexionamos también sobre amor, conciencia y la esencial confianza en la ciencia para mejorar el Ecuador, en un viaje que acerca la complejidad del universo a tu mente!</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-      <div class="episodio">
-        <h3>Episodio 5</h3>
-        <h3>Inevitables: Entropía en Todas las Escalas y Destinos Irreversibles junto a Pierre Pujol.</h3>
-        <p> En este fascinante episodio, nos sumergimos en las profundidades de la física estadística con el experto PhD, Pierre Pujol. Exploramos cómo la irreversibilidad emerge del aumento de grados de libertad, desentrañamos los misterios de la entropía en diversas escalas y debatimos sobre el idealismo en la física. Además, nos aventuramos en el Determinismo Social para mejorar la Ciencia en el Ecuador y, por último, cuestionamos el inevitable fin del Sistema Solar.</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-      <div class="episodio">
-        <h3>Episodio 6</h3>
-        <h3> Herencia envenenada: Moldeando el Mañana Climático, El Niño y la Relación Humano-Planeta con Arianna Paredes.</h3>
-        <p>En este episodio final de la Temporada 1, junto a la física teórica Arianna Paredes, exploramos el clima como un fenómeno de caos y equilibrio. Analizamos El Niño, sus causas y efectos, y nos preguntamos si la Tierra tiene vida propia. Destacamos la posición de Ecuador como un observatorio natural del clima, invitando a una nueva perspectiva: el clima no es solo externo, sino parte de nuestra existencia.</p>
-        <div class="botones">
-            <a href="#" class="boton-red boton-spotify">
-              <i class="fab fa-spotify"></i> Spotify
-            </a>
-            <a href="#" class="boton-red boton-youtube">
-              <i class="fab fa-youtube"></i> YouTube
-            </a>
-          </div>
-      </div>
-    </div>
-    <button class="flecha derecha" id="next"><i class="fas fa-chevron-right"></i></button>
+  <div class="container" id="content">
+        <p>La mecánica cuántica no solo es una de las teorías más exitosas de la ciencia: también es una de las más desconcertantes. Describe el mundo de lo muy pequeño con una precisión asombrosa, pero al hacerlo, nos obliga a replantear nociones fundamentales de realidad, causalidad y observación. ¿Qué significa realmente esta teoría? ¿Qué nos está diciendo sobre el mundo?</p>
+
+    <figure>
+        <img src="https://nickyoder.com/content/images/size/w2000/2023/05/Title-Quantum-2.jpg" alt="Superposición cuántica">
+        <figcaption style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 0.5rem;">
+            Imagen tomada de <a href="https://nickyoder.com/the-multiverse/" target="_blank" rel="noopener noreferrer">nickyoder.com</a>
+        </figcaption>
+    </figure>
+
+    <h2>1. La interpretación de Copenhague</h2>
+    <p>Propuesta por Niels Bohr y Werner Heisenberg, esta es la interpretación “oficial” durante décadas. Según ella, una partícula no tiene propiedades definidas hasta que es medida. <strong>La realidad es indeterminada hasta que la observamos</strong>. Pero... ¿eso significa que el observador crea la realidad? La interpretación de Copenhague nunca fue del todo clara en ese punto, y por eso ha generado tantas críticas y debates.</p>
+
+    <h2>2. Muchos mundos</h2>
+    <p>Hugh Everett propuso una idea tan radical como fascinante: cada vez que ocurre un evento cuántico, el universo se divide en múltiples realidades paralelas. En una, el gato está vivo; en otra, muerto. No es que una posibilidad se haga real y las otras desaparezcan: <em>todas ocurren, pero en universos distintos</em>. Esta interpretación elimina el "colapso" de la función de onda, pero al precio de postular una cantidad infinita de mundos.</p>
+
+    <h2>3. Variables ocultas y realismo cuántico</h2>
+    <p>Einstein nunca estuvo cómodo con la aleatoriedad de la mecánica cuántica. Él creía que debía haber variables ocultas, algo que no veíamos pero que determinaba los resultados. La teoría de De Broglie-Bohm sigue esta línea: propone trayectorias deterministas para las partículas, guiadas por una “onda piloto”. Esta interpretación recupera un mundo objetivo… pero introduce no-localidad: acciones a distancia instantáneas.</p>
+
+    <h2>4. Colapso objetivo</h2>
+    <p>En este enfoque, el colapso de la función de onda es un proceso físico real, no solo una actualización de nuestro conocimiento. Según teorías como GRW (Ghirardi–Rimini–Weber), las superposiciones cuánticas se deshacen espontáneamente con una cierta probabilidad. De ser cierto, podríamos detectar diferencias sutiles en experimentos muy controlados. ¿Y si la naturaleza misma eligiera, por sí sola, una realidad?</p>
+
+    <h2>5. La interpretación relacional</h2>
+    <p>Propuesta por Carlo Rovelli, esta interpretación sugiere que los estados cuánticos no existen de forma absoluta, sino solo <strong>en relación</strong> con otros sistemas. Lo que para un observador es una medición definida, para otro podría seguir siendo una superposición. Una realidad profundamente contextual… que desafía nuestras ideas más básicas de objetividad.</p>
+
+    <p>¿Cuál es la interpretación correcta? La verdad es que aún no lo sabemos. Cada una resalta diferentes aspectos de una teoría que, más que respuestas, parece ofrecernos preguntas. Y tal vez esa sea la clave: la mecánica cuántica no solo describe el mundo. Nos obliga a repensarlo.</p>
+
+    <h2>Sugerencias de lectura y escucha</h2>
+    <ul>
+      <li><strong>Podcast Neurona Errante</strong>  <a href="#">Episodio: “¿El mundo necesita un observador?”</a></li>
+      <li><em>Quantum: Einstein, Bohr and the Great Debate about the Nature of Reality</em>  Manjit Kumar</li>
+      <li><em>The Fabric of the Cosmos</em>  Brian Greene</li>
+      <li><em>Helgoland</em>  Carlo Rovelli (explica la interpretación relacional)</li>
+      <li><a href="https://plato.stanford.edu/entries/qm/" target="_blank">Stanford Encyclopedia of Philosophy: Interpretations of Quantum Mechanics</a></li>
+      <li><a href="https://quantum.country/qcvc" target="_blank">Quantum Country: A mnemonic medium for quantum computation</a></li>
+    </ul>
+
+    <h2>Referencias</h2>
+    <ul>
+      <li>Bohr, N. (1928). "The Quantum Postulate and the Recent Development of Atomic Theory". Nature.</li>
+      <li>Everett, H. (1957). "Relative State" Formulation of Quantum Mechanics. Reviews of Modern Physics.</li>
+      <li>Bohm, D. (1952). A Suggested Interpretation of the Quantum Theory in Terms of “Hidden” Variables. Physical Review.</li>
+      <li>Ghirardi, G.C., Rimini, A., Weber, T. (1986). Unified Dynamics for Microscopic and Macroscopic Systems. Physical Review D.</li>
+      <li>Rovelli, C. (1996). Relational Quantum Mechanics. International Journal of Theoretical Physics.</li>
+    </ul>
   </div>
 
-  <a href="index.html">Volver a la página principal</a>
-  
-
-
   <footer>
-    &copy; 2025 Neurona Errante. Todos los derechos reservados.
+    © 2025 Neurona Errante | Preguntas infinitas
   </footer>
 
   <script>
-    const carousel = document.getElementById('carousel');
-    const nextBtn = document.getElementById('next');
-    const prevBtn = document.getElementById('prev');
-    const items = Array.from(carousel.children);
-    const total = items.length;
-  
-    let index = 0;
-    let autoSlideInterval = null;
-  
-    function updateCarousel() {
-        const itemWidth = items[0].offsetWidth + 32;
-        const offset = (window.innerWidth / 2) - (itemWidth / 2);
-        carousel.style.transform = `translateX(${offset - index * itemWidth}px)`;
+    // Paso 1: Reemplaza letras con <span>
+    function envolverLetras() {
+      const container = document.getElementById('content');
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+      const texts = [];
 
-        items.forEach((item, i) => {
-            if (i === index) {
-            item.classList.add('active');
-            } else {
-            item.classList.remove('active');
-            }
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (node.nodeValue.trim().length > 0) {
+          texts.push(node);
+        }
+      }
+
+      texts.forEach(textNode => {
+        const parent = textNode.parentNode;
+        const fragment = document.createDocumentFragment();
+
+        [...textNode.nodeValue].forEach(char => {
+          const span = document.createElement('span');
+          span.textContent = char;
+          if (char.trim()) {
+            span.classList.add('quantum-letter-pending');
+          }
+          fragment.appendChild(span);
         });
-    }
-  
-    function nextSlide() {
-      index = (index + 1) % total;
-      updateCarousel();
-    }
-  
-    function prevSlide() {
-      index = (index - 1 + total) % total;
-      updateCarousel();
-    }
-  
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    window.addEventListener('resize', updateCarousel);
-  
-    // Detectar si es dispositivo táctil
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  
-    if (isTouchDevice) {
-      // Activar auto-slide solo en móviles
-     // autoSlideInterval = setInterval(nextSlide, 5000);
-  
-      // Deslizamiento táctil manual
-      let startX = 0;
-  
-      carousel.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-      });
-  
-      carousel.addEventListener('touchend', e => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
-        if (diff > 50) prevSlide();
-        if (diff < -50) nextSlide();
+
+        parent.replaceChild(fragment, textNode);
       });
     }
-  
-    updateCarousel();
+
+    // Paso 2: Aplica el efecto cuántico una letra a la vez
+    function activarEfectoSecuencial() {
+      const letras = document.querySelectorAll('.quantum-letter-pending');
+      letras.forEach((letra, i) => {
+        setTimeout(() => {
+          letra.classList.remove('quantum-letter-pending');
+          letra.classList.add('quantum-letter');
+        }, i * 100); // velocidad de animación letra por letra
+      });
+    }
+
+    // Ejecutar a los 10 segundos
+    setTimeout(() => {
+      envolverLetras();
+      activarEfectoSecuencial();
+    }, 10000);
+
+    // Redirigir a los 44 segundos
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 99000);
   </script>
-  
 </body>
 </html>

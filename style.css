@@ -349,6 +349,10 @@ button:hover {
   background-color: #ff0000; /* Color de fondo de Instagram */
 }
 
+.social-icon.spotify {
+  background-color: #25e622; /* Color de fondo de Instagram */
+}
+
 .podcast-player {
   display: flex;
   justify-content: center;

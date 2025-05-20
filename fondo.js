@@ -25,7 +25,7 @@ const canvas = document.getElementById('neuron-background');
       }
     
       draw() {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+        ctx.fillStyle = 'rgba(113, 113, 113, 0.7)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -39,7 +39,7 @@ const canvas = document.getElementById('neuron-background');
           const dy = particlesArray[a].y - particlesArray[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 100) {
-            ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+            ctx.strokeStyle = 'rgba(140, 140, 140, 0.1)';
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);

@@ -45,7 +45,7 @@
       activarEfectoSecuencial();
     }, 10000);
 
-    // Redirigir a los 44 segundos
+    // Redirigir a los 99 segundos
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 99000);

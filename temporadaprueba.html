@@ -1,198 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Explora las principales interpretaciones de la mecánica cuántica y cómo intentan dar sentido al comportamiento extraño de la realidad a nivel subatómico."/>
-  <title>¿Qué significa la mecánica cuántica? | Blog Neurona Errante</title>
+  <meta charset="UTF-8">
+  <title>Neurona Errante - Intro</title>
   <style>
-    @keyframes quantumEffect {
-      0% {
-        opacity: 1;
-        filter: blur(0);
-        transform: translate(0, 0);
-      }
-      50% {
-        opacity: 0.4;
-        filter: blur(2px);
-        transform: translate(-2px, 2px);
-      }
-      100% {
-        opacity: 0;
-        filter: blur(4px);
-        transform: translate(3px, -3px);
-      }
-    }
-
-    .quantum-letter {
-      display: inline-block;
-      animation: quantumEffect 1.2s forwards;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
+    html, body {
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #333;
+      background: #0e0e23;
+      overflow: hidden;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
     }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
+    canvas {
+      display: block;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+    #title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5em;
+      opacity: 0;
+      transition: opacity 1.5s ease-in;
     }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
-      border-radius: 10px;
-    }
-    h2 {
-      color: #111;
-      margin-top: 2rem;
-    }
-    ul {
-      margin-left: 1.5rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    #title.show {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>¿Qué significa la mecánica cuántica?</h1>
-    <p>Interpretaciones posibles de una teoría que desafía la intuición</p>
-  </header>
+  <canvas id="logoCanvas"></canvas>
+  <div id="title">Neurona Errante</div>
 
-  <div class="container" id="content">
-        <p>La mecánica cuántica no solo es una de las teorías más exitosas de la ciencia: también es una de las más desconcertantes. Describe el mundo de lo muy pequeño con una precisión asombrosa, pero al hacerlo, nos obliga a replantear nociones fundamentales de realidad, causalidad y observación. ¿Qué significa realmente esta teoría? ¿Qué nos está diciendo sobre el mundo?</p>
-
-    <figure>
-        <img src="https://nickyoder.com/content/images/size/w2000/2023/05/Title-Quantum-2.jpg" alt="Superposición cuántica">
-        <figcaption style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 0.5rem;">
-            Imagen tomada de <a href="https://nickyoder.com/the-multiverse/" target="_blank" rel="noopener noreferrer">nickyoder.com</a>
-        </figcaption>
-    </figure>
-
-    <h2>1. La interpretación de Copenhague</h2>
-    <p>Propuesta por Niels Bohr y Werner Heisenberg, esta es la interpretación “oficial” durante décadas. Según ella, una partícula no tiene propiedades definidas hasta que es medida. <strong>La realidad es indeterminada hasta que la observamos</strong>. Pero... ¿eso significa que el observador crea la realidad? La interpretación de Copenhague nunca fue del todo clara en ese punto, y por eso ha generado tantas críticas y debates.</p>
-
-    <h2>2. Muchos mundos</h2>
-    <p>Hugh Everett propuso una idea tan radical como fascinante: cada vez que ocurre un evento cuántico, el universo se divide en múltiples realidades paralelas. En una, el gato está vivo; en otra, muerto. No es que una posibilidad se haga real y las otras desaparezcan: <em>todas ocurren, pero en universos distintos</em>. Esta interpretación elimina el "colapso" de la función de onda, pero al precio de postular una cantidad infinita de mundos.</p>
-
-    <h2>3. Variables ocultas y realismo cuántico</h2>
-    <p>Einstein nunca estuvo cómodo con la aleatoriedad de la mecánica cuántica. Él creía que debía haber variables ocultas, algo que no veíamos pero que determinaba los resultados. La teoría de De Broglie-Bohm sigue esta línea: propone trayectorias deterministas para las partículas, guiadas por una “onda piloto”. Esta interpretación recupera un mundo objetivo… pero introduce no-localidad: acciones a distancia instantáneas.</p>
-
-    <h2>4. Colapso objetivo</h2>
-    <p>En este enfoque, el colapso de la función de onda es un proceso físico real, no solo una actualización de nuestro conocimiento. Según teorías como GRW (Ghirardi–Rimini–Weber), las superposiciones cuánticas se deshacen espontáneamente con una cierta probabilidad. De ser cierto, podríamos detectar diferencias sutiles en experimentos muy controlados. ¿Y si la naturaleza misma eligiera, por sí sola, una realidad?</p>
-
-    <h2>5. La interpretación relacional</h2>
-    <p>Propuesta por Carlo Rovelli, esta interpretación sugiere que los estados cuánticos no existen de forma absoluta, sino solo <strong>en relación</strong> con otros sistemas. Lo que para un observador es una medición definida, para otro podría seguir siendo una superposición. Una realidad profundamente contextual… que desafía nuestras ideas más básicas de objetividad.</p>
-
-    <p>¿Cuál es la interpretación correcta? La verdad es que aún no lo sabemos. Cada una resalta diferentes aspectos de una teoría que, más que respuestas, parece ofrecernos preguntas. Y tal vez esa sea la clave: la mecánica cuántica no solo describe el mundo. Nos obliga a repensarlo.</p>
-
-    <h2>Sugerencias de lectura y escucha</h2>
-    <ul>
-      <li><strong>Podcast Neurona Errante</strong>  <a href="#">Episodio: “¿El mundo necesita un observador?”</a></li>
-      <li><em>Quantum: Einstein, Bohr and the Great Debate about the Nature of Reality</em>  Manjit Kumar</li>
-      <li><em>The Fabric of the Cosmos</em>  Brian Greene</li>
-      <li><em>Helgoland</em>  Carlo Rovelli (explica la interpretación relacional)</li>
-      <li><a href="https://plato.stanford.edu/entries/qm/" target="_blank">Stanford Encyclopedia of Philosophy: Interpretations of Quantum Mechanics</a></li>
-      <li><a href="https://quantum.country/qcvc" target="_blank">Quantum Country: A mnemonic medium for quantum computation</a></li>
-    </ul>
-
-    <h2>Referencias</h2>
-    <ul>
-      <li>Bohr, N. (1928). "The Quantum Postulate and the Recent Development of Atomic Theory". Nature.</li>
-      <li>Everett, H. (1957). "Relative State" Formulation of Quantum Mechanics. Reviews of Modern Physics.</li>
-      <li>Bohm, D. (1952). A Suggested Interpretation of the Quantum Theory in Terms of “Hidden” Variables. Physical Review.</li>
-      <li>Ghirardi, G.C., Rimini, A., Weber, T. (1986). Unified Dynamics for Microscopic and Macroscopic Systems. Physical Review D.</li>
-      <li>Rovelli, C. (1996). Relational Quantum Mechanics. International Journal of Theoretical Physics.</li>
-    </ul>
-  </div>
-
-  <footer>
-    © 2025 Neurona Errante | Preguntas infinitas
-  </footer>
-
+  <script src="logo_particles_coords.js"></script>
   <script>
-    // Paso 1: Reemplaza letras con <span>
-    function envolverLetras() {
-      const container = document.getElementById('content');
-      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
-      const texts = [];
+    const canvas = document.getElementById('logoCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-      while (walker.nextNode()) {
-        const node = walker.currentNode;
-        if (node.nodeValue.trim().length > 0) {
-          texts.push(node);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    const scale = 1.5;
+    const particles = [];
+    const speed = 0.04;
+
+    const allCoords = [];
+    logoCoordinates.forEach(coord => {
+      for (let i = 0; i < 3; i++) {
+        const targetX = centerX + (coord.x - 256) * scale;
+        const targetY = centerY + (coord.y - 256) * scale;
+        allCoords.push({ targetX, targetY });
+      }
+    });
+
+    allCoords.forEach(({ targetX, targetY }) => {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        targetX,
+        targetY
+      });
+    });
+
+    let allArrived = false;
+    let finishedTime = 0;
+    let fadedOut = false;
+
+    function animate(time) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      allArrived = true;
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 40) {
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(112, 227, 255, 0.1)';
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
         }
       }
 
-      texts.forEach(textNode => {
-        const parent = textNode.parentNode;
-        const fragment = document.createDocumentFragment();
+      particles.forEach(p => {
+        const dx = p.targetX - p.x;
+        const dy = p.targetY - p.y;
+        p.x += dx * speed;
+        p.y += dy * speed;
 
-        [...textNode.nodeValue].forEach(char => {
-          const span = document.createElement('span');
-          span.textContent = char;
-          if (char.trim()) {
-            span.classList.add('quantum-letter-pending');
-          }
-          fragment.appendChild(span);
-        });
+        if (Math.abs(dx) > 1 || Math.abs(dy) > 1) {
+          allArrived = false;
+        }
 
-        parent.replaceChild(fragment, textNode);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 1.2, 0, 2 * Math.PI);
+        ctx.fillStyle = '#70e3ff';
+        ctx.fill();
       });
+
+      if (allArrived) {
+        document.getElementById('title').classList.add('show');
+
+        if (!finishedTime) finishedTime = time;
+        if (time - finishedTime > 3000 && !fadedOut) {
+          fadedOut = true;
+          fadeOut();
+        }
+      }
+
+      requestAnimationFrame(animate);
     }
 
-    // Paso 2: Aplica el efecto cuántico una letra a la vez
-    function activarEfectoSecuencial() {
-      const letras = document.querySelectorAll('.quantum-letter-pending');
-      letras.forEach((letra, i) => {
-        setTimeout(() => {
-          letra.classList.remove('quantum-letter-pending');
-          letra.classList.add('quantum-letter');
-        }, i * 100); // velocidad de animación letra por letra
-      });
+    function fadeOut() {
+      const overlay = document.getElementById('title');
+      overlay.style.transition = 'opacity 2s ease';
+      overlay.style.opacity = '0';
+      canvas.style.transition = 'opacity 2s ease';
+      canvas.style.opacity = '0';
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 2000);
     }
 
-    // Ejecutar a los 10 segundos
-    setTimeout(() => {
-      envolverLetras();
-      activarEfectoSecuencial();
-    }, 10000);
-
-    // Redirigir a los 44 segundos
-    setTimeout(() => {
-      window.location.href = 'index.html';
-    }, 99000);
+    animate();
   </script>
 </body>
 </html>
